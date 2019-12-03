@@ -11,7 +11,7 @@ console.log('Euro: '+ MXNToConvert / valueEURToday);
 console.log('Cuban Convertible Peso: '+ MXNToConvert / CUCToCUP);
 
 
-// Home Work: My age in seconds
+// Homework: My age in seconds
 
 // Seconds equivalences
 var secondsInMinutes = 60;
