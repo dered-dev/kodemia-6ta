@@ -1,4 +1,3 @@
-console.log("Hola Koders")
 // Ejercicio 1 Divisas
 
 var MXNToConvert = 1;
