@@ -29,4 +29,4 @@ var ageDay = 21;
 var ageYearToSeconds  = ageYear * secondsInYear;
 var ageMonthToSeconds = ageMonth * secondsInMonth;
 var ageDayToSeconds   = ageDay * secondsInDay;
-console.log('Han pasado '+ (ageYearToSeconds + ageMonthToSeconds + ageDayToSeconds) +' segundos desde');
+console.log('He vivido '+ (ageYearToSeconds + ageMonthToSeconds + ageDayToSeconds) +' segundos');
