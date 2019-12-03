@@ -1,4 +1,4 @@
-// Ejercicio 1 Divisas
+// Exercise one. Foreign exchange
 
 var MXNToConvert = 1;
 var valueUSDToday = 19.57;
@@ -11,8 +11,7 @@ console.log('Euro: '+ MXNToConvert / valueEURToday);
 console.log('Cuban Convertible Peso: '+ MXNToConvert / CUCToCUP);
 
 
-// Tarea: Mi edad en segundos
-
+// Home Work: My age in seconds
 
 // Seconds equivalences
 var secondsInMinutes = 60;
