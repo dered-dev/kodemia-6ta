@@ -18,7 +18,7 @@ var secondsInMinutes = 60;
 var secondsInHours   = 60 * secondsInMinutes; 
 var secondsInDay     = 24 * secondsInHours;
 var secondsInMonth   = 30 * secondsInDay;
-var secondsInYear    = 12 * secondsInMonth;
+var secondsInYear    = (365 *  secondsInDay);
 
 // My age
 var ageYear = 28; 
@@ -29,4 +29,4 @@ var ageDay = 21;
 var ageYearToSeconds  = ageYear * secondsInYear;
 var ageMonthToSeconds = ageMonth * secondsInMonth;
 var ageDayToSeconds   = ageDay * secondsInDay;
-console.log('Han pasado '+ (ageYearToSeconds + ageMonthToSeconds + ageDayToSeconds));
+console.log('Han pasado '+ (ageYearToSeconds + ageMonthToSeconds + ageDayToSeconds) +' segundos desde');
