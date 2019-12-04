@@ -37,9 +37,9 @@ if(strCompare.length % 2 === 0){
     console.log('El numero es par')
     if(strCompare.length >= 0){
         if(strCompare.length <= 10){
-            console.log('El numero es mayor que 0 y menor que 10')
+            console.log('El numero es mayor o igual a 0 y menor que 11')
         }else if(strCompare.length <= 15){
-            console.log('El numero es mayor o igual a 11 y menor que 15')
+            console.log('El numero es mayor a 10 y menor o igual a 15')
         }else{
             console.log('El numero es mayor que 15')
         }
