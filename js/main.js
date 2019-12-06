@@ -1,36 +1,29 @@
-/*
-    Exercise 1.
-    Se tiene una lista con el nombre de cada uno de los empleados, con los días que faltaron al trabajo
-    Ej -> [ [David, 4], [Jose, 2] ]
-    Si el sueldo diario son $450.00, y por cada día que faltaron se le descuenta el 2% del salario ( acumulable),
-    cuanto es el sueldo final del empleado.
-    OUTPUT: {name}: ${salary}.00
-
+/**
+* Exercise 1.
+* Se tiene una lista con el nombre de cada uno de los empleados, con los días que faltaron al trabajo
+* Ej -> [ [David, 4], [Jose, 2] ]
+* Si el sueldo diario son $450.00, y por cada día que faltaron se le descuenta el 2% del salario (no acumulable),
+* cuanto es el sueldo final del empleado.
+* OUTPUT: {name}: ${salary}.00
 */
 
-var empleados        = [ ['Jose',4],['Pedro',2],['Luis',3]];
+var listEmployes        = [ ['Jose',4],['Pedro',2],['Luis',3]];
 var salaryTotal      = [];
 var payDays          = 30;
 var salarioDay       = 450;
 var percentDisccount = 2;
 
-// salarios 
-for(var count = 0; count <= empleados.length-1; count++){
+for(var count = 0; count <= listEmployes.length-1; count++){
     var salaryEmployee = salarioDay * payDays;
-    for(var countInner = 0; countInner <= empleados[count][1]; countInner++){
+    for(var countInner = 0; countInner <= listEmployes[count][1]; countInner++){
         salaryEmployee = (salaryEmployee * (1-percentDisccount/100))
-        console.log(salaryEmployee)
     }
     salaryTotal[count] = salaryEmployee;
+    console.log(`${listEmployes[count][0]}:  ${salaryEmployee}.00`)
 }
 
-// print salary final
-console.log(salaryTotal)
-
-
-
-/*
-Functions:
+/**
+* Functions
 */
 const PI = 3.1416
 function circleArea(radius){
@@ -42,11 +35,11 @@ console.log(circleArea(4))
 console.log(circleArea(8))  
 
 
-/*
-Exercise 2.
-Input: 
+/**
+* Exercise 2.
+* Input :[['name','lastname'],['name','lastname'],...] 
+* Output: name lastname
 */
-
 
 var names = [['jorge',''],['','Luna'],['','perez'],['',''],['',''],['',''],['',''],['','']]
 function concatNames(arrayNames){
@@ -72,10 +65,21 @@ function concatNames(arrayNames){
     }
 }
 concatNames(names)
-
-// function verify a palindrome
+/**
+* Exercise 3. 
+* Function verify a palindrome
+*/
 function verifyPalindrome(frase){
-    var newFrase = frase.replace(/\s+/g, '').toLowerCase();
+    frase.toLowerCase();
+    var newFrase = "";
+    // regex
+    // newFrase = frase.replace(/\s+/g, '');
+    // only for loop
+    for(var count = 0; count < frase.length; count++){
+        if(frase[count] !== ' '){
+            newFrase += frase[count]
+        }
+    }
     var reverse = ""
     for(var count = newFrase.length -1; count >= 0; count--){
         reverse += newFrase[count];
@@ -86,19 +90,19 @@ function verifyPalindrome(frase){
         return false;
     }
 }
-verifyPalindrome('anita lava la tina')
+console.log(verifyPalindrome('anita lava la tina'))
 
-// resolver algoritmo
-// n1=1 n2=5 n3=13 n4=35 shape area
+/**
+ *  Exercise 4. solve the secuence
+ *  n1=1, n2=5, n3=13, n4=25
+ *  Solution: n**2 + (n-1)**2 
+ */
 
-// n1 = 1
-// n2 = 5
-// n3 = 13 
-// n4 = 25
-
-function shape(n){
-    
+function patternShape(n){
+    var numberShapeArea = n**2 + ((n-1)**2)
+    return  numberShapeArea;
 }
-
+// call function patternShape
+console.log(patternShape(1),patternShape(2),patternShape(3),patternShape(4))
 
 
