@@ -10,17 +10,18 @@
 var listEmployes        = [ ['Jose',4],['Pedro',2],['Luis',3]];
 var salaryTotal      = [];
 var payDays          = 30;
-var salarioDay       = 450;
+var salaryDay       = 450;
 var percentDisccount = 2;
 
 for(var count = 0; count <= listEmployes.length-1; count++){
-    var salaryEmployee = salarioDay * payDays;
+    var salaryEmployee = salaryDay * payDays;
     for(var countInner = 0; countInner <= listEmployes[count][1]; countInner++){
         salaryEmployee = (salaryEmployee * (1-percentDisccount/100))
     }
     salaryTotal[count] = salaryEmployee;
     console.log(`${listEmployes[count][0]}:  ${salaryEmployee}.00`)
 }
+
 
 /**
 * Functions
@@ -41,30 +42,25 @@ console.log(circleArea(8))
 * Output: name lastname
 */
 
-var names = [['jorge',''],['','Luna'],['','perez'],['',''],['',''],['',''],['',''],['','']]
+var arrayNames = [['jorge',''],['','Luna'],['','perez'],['',''],['',''],['',''],['',''],['','']]
 function concatNames(arrayNames){
     for(var count = 0; count <= arrayNames.length - 1; count++){
         var name = arrayNames[count][0];
         var lastName = arrayNames[count][1];
-        if(name === "" && lastName === ""){
-            // both
+        if(name === "" && lastName === ""){ // both
             console.log(`Name ${count + 1}: --- ---`)
-
-        }else if(name === "" && lastName !== ""){
-            // one
+        }else if(name === "" && lastName !== ""){ // one
             console.log(`Name ${count + 1}: --- ${ lastName } `)
-            
-        }else if(name !== "" && lastName === ""){
-            // two
+        }else if(name !== "" && lastName === ""){ // two
             console.log(`Name ${count + 1}: ${ name } ---`)
-
-        }else{
-            // any
+        }else{ // any
             console.log(`Name ${count + 1}: ${ name } ${ lastName } `)
         }
     }
 }
-concatNames(names)
+concatNames(arrayNames)
+
+
 /**
 * Exercise 3. 
 * Function verify a palindrome
@@ -72,6 +68,7 @@ concatNames(names)
 function verifyPalindrome(frase){
     frase.toLowerCase();
     var newFrase = "";
+    var reverseFrase = ""
     // regex
     // newFrase = frase.replace(/\s+/g, '');
     // only for loop
@@ -80,11 +77,11 @@ function verifyPalindrome(frase){
             newFrase += frase[count]
         }
     }
-    var reverse = ""
+    
     for(var count = newFrase.length -1; count >= 0; count--){
-        reverse += newFrase[count];
+        reverseFrase += newFrase[count];
     }
-    if(newFrase === reverse){
+    if(newFrase === reverseFrase){
         return true;
     }else{
         return false;
