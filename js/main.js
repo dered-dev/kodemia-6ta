@@ -19,7 +19,7 @@ for(var count = 0; count <= listEmployes.length-1; count++){
         salaryEmployee = (salaryEmployee * (1-percentDisccount/100))
     }
     salaryTotal[count] = salaryEmployee;
-    console.log(`${listEmployes[count][0]}:  ${salaryEmployee}.00`)
+    console.log(`${listEmployes[count][0]}:  ${salaryEmployee}`)
 }
 
 
