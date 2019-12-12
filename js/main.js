@@ -6,7 +6,7 @@
 var wordsArray = ['hola','perro','Alan','oso','Arbol']
 
 // solution with .map()
-const singleWordMap    = arr => arr.map(word => word.charAt(0)).join('')
+const singleWordMap = arr => arr.map(word => word.charAt(0)).join('')
 console.log(singleWordMap(wordsArray))
 
 // solution with .map()
