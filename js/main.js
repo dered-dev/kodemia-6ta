@@ -120,7 +120,6 @@ console.log(getListRFC(listRFCs))
  */
 
 
-
 var AveragePersubject = studentList => studentList.map((cValue)=>{
     console.log(studentList)
 })
