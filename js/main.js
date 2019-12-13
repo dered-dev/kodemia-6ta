@@ -11,11 +11,11 @@ var arrayStudents = [
                 'grade': 10
             },
             {
-                'name': 'History',
+                'name': 'Math',
                 'grade': 10
             },
             {
-                'name': 'History',
+                'name': 'chemistry',
                 'grade': 10
             }
         ]
@@ -28,29 +28,12 @@ var arrayStudents = [
                 'grade': 9
             },
             {
-                'name': 'History',
+                'name': 'Math',
                 'grade': 9
             },
             {
-                'name': 'History',
+                'name': 'chemistry',
                 'grade': 9
-            }
-        ]
-    },
-    {
-        name: 'jorge',
-        subjects: [
-            {
-                'name': 'History',
-                'grade': 8.3
-            },
-            {
-                'name': 'History',
-                'grade': 9
-            },
-            {
-                'name': 'History',
-                'grade': 7
             }
         ]
     }
@@ -100,9 +83,6 @@ var listRFCs = [
         year : '1991',
         month : '05',
         day : '12',
-        createRFC: function(){
-            return getRFC(this.apaterno,this.amaterno,this.nombres,this.year,this.month,this.day)
-        }
     },
     {
         apaterno : 'camarillo',
@@ -111,14 +91,12 @@ var listRFCs = [
         year : '1995',
         month : '05',
         day : '12',
-        createRFC: function(){
-            return getRFC(this.apaterno,this.amaterno,this.nombres,this.year,this.month,this.day)
-        }
     }
 ]
 
-const getRFC = (aPaterno, aMaterno, nombres,year,month, day, temp = "") => {
+const getRFC = (aPaterno, aMaterno, nombres,year,month,day) => {
     var vowels = 'aeiou'
+    var temp = '';
     var firstLetter = aPaterno.split('').reduce(function(acc,letter,index){
         if(vowels.includes(letter) && index > 1){
             temp += letter;
@@ -130,7 +108,9 @@ const getRFC = (aPaterno, aMaterno, nombres,year,month, day, temp = "") => {
     return letters + numbers
 }
 const getListRFC = arr => {
-    return arr.map((cvalue) => cvalue.createRFC())
+    return arr.map((cvalue) => {
+        return getRFC(cvalue.apaterno, cvalue.amaterno, cvalue.nombres, cvalue.year, cvalue.month, cvalue.day)
+    })
 }
 console.log(getListRFC(listRFCs))
 
@@ -138,4 +118,15 @@ console.log(getListRFC(listRFCs))
  * Exercise 3
  * Abstraer el objeto alumno, y dado un array de alumnos dar promedio por materia por periodo
  */
+
+
+
+var AveragePersubject = studentList => studentList.map((cValue)=>{
+    console.log(studentList)
+})
+AveragePersubject(arrayStudents)
+
+
+
+
 
