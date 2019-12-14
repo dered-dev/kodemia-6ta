@@ -3,10 +3,13 @@
  */
 const names = ['jorge', 'luis', 'luis', 'mario', 'octavio',1,2,3,4,4];
 const array = ['dog','cat','cat',1,2,2,3]
-const removeDups = array => array.filter((item,index) => {
-  return array.indexOf(item) === index
-})
 
+// filter method
+// const removeDups = array => array.filter((item,index) => {
+//   return array.indexOf(item) === index
+// })
+
+// single for method
 function removeDups(arr){
   let unique_array = []
   for(let i = 0;i < arr.length; i++){
@@ -28,4 +31,3 @@ var liNodes = document.getElementsByTagName('li')
 for(let count = 0; count < textArray.length; count++){
   liNodes[count].innerText = textArray[count]
 }
-const appendText = (nodes)
