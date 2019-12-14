@@ -1,5 +1,9 @@
 /**
- * Funciones constructoras
+ * Example: constructor function
+ * @param {string} firstName
+ * @param {string} lastName
+ * @param {string} age 
+ * @return {array}
  */
 
 var newArray = [
@@ -19,17 +23,24 @@ console.log(arrayMaped(newArray))
 
 
 /**
- * destructuring
+ * Object Destructuring
  */
 
-
+const student = {
+  firstname: 'Jorge Luis',
+  lastname: 'Camarillo',
+  country: 'México'
+};
+const { firstname, lastname, country } = student;
+console.log(firstname, lastname, country); // Jorge Luis Camarillo México
 
 
 /**
  * Challenge 1: Cree una funcion que tome 2 numeros por argumentos (num,length) y devuelva
  * una matriz de multiplos de num hasta length
- * @param {*} mul 
- * @param {*} len 
+ * @param {number} mul
+ * @param {number} len 
+ * @return {array}
  */
 
 const arrayMultiple = (mul, len) => {
@@ -45,6 +56,8 @@ console.log(arrayMultiple(17, 6))
 /**
  * Challenge 2: escriba una funcion, que convierta un objeto en una matriz,
  * donde cada elemento representa un par clave valor
+ * @param {Object} obj
+ * @return {array}
  */
 
 const objectToArray = obj => {
