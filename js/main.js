@@ -1,5 +1,5 @@
 /**
- * Challenge 3: 
+ * Challenge 3: Remover elementos duplicados en un array
  */
 const names = ['jorge', 'luis', 'luis', 'mario', 'octavio',1,2,3,4,4];
 const array = ['dog','cat','cat',1,2,2,3]
@@ -25,9 +25,13 @@ function removeDups(arr){
  * DOM, First Class
  */
 
-var textArray = ['item 1','item 2','item 3','item 4','item 5']
+
+var textArray = ['item 1','item 2','item 3','item 4','item 5.0']
 var liNodes = document.getElementsByTagName('li')
 
-for(let count = 0; count < textArray.length; count++){
-  liNodes[count].innerText = textArray[count]
+const updateList = (arrToRender,nodeList) =>{
+  for(let count = 0; count < textArray.length; count++){
+    liNodes[count].innerText = textArray[count]
+  }
 }
+updateList(textArray,liNodes)
