@@ -1,36 +1,6 @@
 /**
- * Post blog abstraction
+ * Exercise 1: Post blog abstraction
  */
-// var post_blog = [
-//   {
-//     post_id: "",
-//     post_title: "",
-//     post_subtitle: "",
-//     post_abstract: "",
-//     post_content: "",
-//     post_featured_image: "",
-//     post_thumb_image: "",
-//     post_gallery: "",
-//     post_video: "",
-//     SEO: [
-//       {
-//         keywords: ""
-//         title: ""
-//         description: ""
-//         ogtitle: ""
-//         ogtype
-//         ogimage: ""
-//         url: ""
-//         twcard: ""
-//         twsite: ""
-//         twtype: ""
-//         twdesc: ""
-//         twtitle: ""
-//         twimage: ""
-//       }
-//     ]
-//   }
-// ]
 
 var arrayElements = [
   {
@@ -84,9 +54,14 @@ const buildTreeInnerHTMLWithReduce = (nodes, parent) => {
   }, '')
   parentNode.innerHTML = accNodes
 }
-//addElements(arrayElements,'container')
-//buildTreeInnerHTMLWithReduce(arrayElements,'container')
 
+/**
+ * Add post elements to container
+ * @param {*} nodes 
+ * @param {*} parent 
+ */
+
+// forEach alternative
 const buildPost = (nodes, parent) => {
   var parentNode = document.getElementById(parent)
   arrayElements.forEach(({ title, subtitle, content,img,link }) => {
@@ -105,8 +80,7 @@ const buildPost = (nodes, parent) => {
     `);
   });
 }
-//buildPost(arrayElements,'listPost')
-
+// Reduce alternative
 const buildPostReduce = (nodes, parent) => {
   const parentNode = document.getElementById(parent)
   const accNodes = nodes.reduce((acc, { title, subtitle, content,img,link }) => {
@@ -128,12 +102,6 @@ const buildPostReduce = (nodes, parent) => {
 }
 
 buildPostReduce(arrayElements,'listPost')
-
-
-
-
-
-
 
 
 
