@@ -24,6 +24,19 @@ console.log(capitalizePhrase(phraseToCapitalize))
  *  [[1,2,0], ['a',3,0], [1,0,1]]; => output: 3
  */
 
+function countNumber(arrMultiple,num) {
+  let accNumber = 0;
+  for(let count = 0;count < arrMultiple.length; count++){
+    for(let countItem = 0; countItem < arrMultiple[count].length; countItem++){
+      if(arrMultiple[count][countItem] === num){
+        accNumber++
+      }
+    }
+  }
+  return accNumber
+}
+countNumber([[1,2,0], ['a',3,0], [1,0,1]], 1)
+
 
 
 /**
