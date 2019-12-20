@@ -60,12 +60,14 @@ const validateEmail = str => {
   }
 }
 
+// Function remove class
 const removeClass = (selector, classremove) => {
   var elementsToRemove = document.querySelectorAll(selector);
   for (var i = 0; i < elementsToRemove.length; i++) {
     elementsToRemove[i].classList.remove(classremove);
   }
 }
+
 // add/remove class on focus
 document.querySelectorAll("input[type='text']").forEach(element => {
   element.addEventListener("focus", function () {
@@ -124,7 +126,6 @@ document.getElementById("addNew").addEventListener("click", function () {
       emailToValidate.classList.add('error')
       return
     } else {
-
       var user = {
         'name': document.getElementById('input-name').value,
         'email': document.getElementById('input-email').value
