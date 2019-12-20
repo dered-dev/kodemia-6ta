@@ -4,10 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hola mundo JS</title>
+    <title>List Koders</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
+    <div id="listPost" class="list__post">
+
+    </div>
+
+    <div class="ctn__card__info ">
+        <div class="card__info" data-open="">
+            <button class="close__cardInfo">x</button>
+            <img src="http://lorempixel.com/300/200/people/1" alt="">
+            <div class="inner__card__info">
+                <p id="fullName"></p>
+                <p id="age"></p>
+                <p id="pitch"></p>
+                <button class="btn btn__edit" data-id="">Editar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ctn__formEdit">
+        <div class="innerFormEdit">
+            <h4>Editar Koder</h4>
+            <div class="group__formItem">
+                <label for="">First Name</label>
+                <input id="formFirstName" type="text" placeholder="">
+            </div>
+            <div class="group__formItem">
+                <label for="">Last Name</label>
+                <input id="formLastName" type="text" placeholder="">
+            </div>
+            <div class="group__formItem">
+                <label for="">Age</label>
+                <input id="formAge" type="text" placeholder="">
+            </div>
+            <div class="group__formItem">
+                <label for="">
+                    <input id="formPitch" type="checkbox" value="1">
+                    Pitch
+                </label>
+            </div>
+            <div class="group__formItem">
+                <button class="btn full update__koder">Actualizar</button>
+            </div>
+        </div>
+    </div>
     
     <script src="js/main.js"></script>
 </body>
