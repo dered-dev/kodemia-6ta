@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hola mundo JS</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    <h1 class="title__koders">Koders</h1>
+    <h1 class="title__koders mb-5">Koders</h1>
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <form action="" class="w-50 form__koders ">
+            <div class="col-6">
+                <form action="" class="form__koders " id="formKoders">
                     <div class="form-group">
-                        <label for=""></label>
-                        <input type="text" class="form-control" id="input-name" >
+                        <label for="">Nombre</label>
+                        <input type="text" class="form-control" id="input-name" placeholder="Nombre" required>
                     </div>
                     <div class="form-group">
-                        <label for=""></label>
-                        <input type="text" class="form-control" id="input-email" >
+                        <label for="">Correo electrónico</label>
+                        <input type="email" class="form-control" id="input-email" placeholder="Correo Electrónico"
+                            required>
                     </div>
                     <div class="form-group">
-                       <button type="button" id="addNew">Agregar Koder</button>
+                        <span class="error__message"></span>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="button" id="addNew" class="btn btn-primary btn__addNew">Agregar Koder</button>
                     </div>
                 </form>
             </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="text-center mb-3">List Koders</h3>
+                        <ul class="row list-group bg-light" id="listPost">
+                            <!-- list koders -->
+                            <span class="empty__message text-center mt-2 bg-light p-5">Agrega un Koder :)</span>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="container mt-5">
-        <h1>List Koders</h1>
-        <ul class="row list-group" id="listPost">
-            <!-- list koders -->
-        </ul>
-    </div>
-    
-    
-    <script src="js/main.js"></script>
 
-    <style>
-        .list-group{
-            position: relative;
-        }
-        .list-group:empty::after{
-            content: "Agrega un koder";
-        }
-    
-    </style>
+    </div>
+
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>
