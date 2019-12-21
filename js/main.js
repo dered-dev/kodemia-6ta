@@ -51,7 +51,7 @@ const buildPostCards = (nodes, parent = 'listPost') => {
       <div class="wrap__item">
         <div class="card card__item" data-id="${item}">
             <div class="card-body">
-              <img class="card-img" src="http://lorempixel.com/300/200/people/1"/ >
+              <img class="card-img" src="http://lorempixel.com/300/200/people"/ >
               <div class="card-info">
                 <h5 class="card-title">${firstName} ${lastName}</h5>
               </div>
@@ -71,6 +71,7 @@ request('https://ajaxkode.firebaseio.com/koders.json', buildPostCards)
 
 const closeInfo = document.getElementsByClassName('close__cardInfo')[0];
 const ctnModalInfo = document.getElementsByClassName('ctn__card__info')[0];
+const closeModalForm = document.getElementsByClassName('close__modalForm')[0];
 const ctnModalForm = document.getElementsByClassName('ctn__formEdit')[0];
 
 closeInfo.addEventListener('click', function (event) {
@@ -122,8 +123,12 @@ const fillCardForm = (arr) => {
   document.getElementById('formLastName').value = `${lastName}`
   document.getElementById('formAge').value = age
   document.getElementById("formPitch").checked = pitch;
-  ctnModalInfo.classList.remove('open')
-  ctnModalForm.classList.add('open')
+
+  toggleClass(ctnModalInfo,'remove','open')
+  toggleClass(ctnModalForm,'add','open')
+
+  //ctnModalInfo.classList.remove('open')
+  //ctnModalForm.classList.add('open')
 }
 
 // click to edit form 
@@ -158,3 +163,18 @@ const showUpdated = () =>{
     document.querySelectorAll('.card__item[data-id="'+idKoder+'"]')[0].classList.remove('focused');
   },5000)
 }
+
+// close modal form edit
+closeModalForm.addEventListener('click', function(){
+  ctnModalForm.classList.remove('open')
+})
+
+// bloqued body
+const toggleClass = (e, straction, cls) => {
+  if(straction === 'remove'){
+    e.classList.remove(cls)
+  }else{
+    e.classList.add(cls)
+  }
+}
+
